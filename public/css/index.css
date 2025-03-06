@@ -1,0 +1,374 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #1a202c, #2d3748); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e2e8f0;
+}
+
+/* Container Styles */
+.container {
+    background-color: #2d3748;
+    width: 100%;
+    max-width: 860px; /* Slightly smaller container for a more compact look */
+    border-radius: 16px; /* More rounded corners for a modern feel */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Deep shadow for depth */
+    display: flex;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+    height: 600px;
+}
+
+/* Image Section */
+.image-section {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-section:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.image-section .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
+    color: #e2e8f0;
+    border-radius: 0 0 16px 0; /* Rounded corners for the overlay */
+}
+
+.image-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.image-section p {
+    margin: 8px 0 16px;
+}
+
+.image-section button {
+    background-color: #4a5568;
+    color: #e2e8f0;
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.image-section button:hover {
+    background-color: #718096;
+    color: #1a202c;
+    transform: translateY(-2px);
+}
+
+/* Form Section */
+.form-section {
+    width: 66%;
+    background-color: #1a202c;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 16px;
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); Soft shadow around the form */
+    animation: slideIn 1s ease-out;
+    height: auto;
+}
+
+.form-section .icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.form-section h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #e2e8f0;
+    text-transform: uppercase;
+}
+
+/* Email & Password Inputs */
+.form-section input {
+    width: 50%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #2d3748;
+    color: #e2e8f0;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft inner shadow for depth */
+}
+
+.form-section input:focus {
+    background-color: #3d4a5a;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.922);
+}
+
+
+/* Login Button */
+input[type="submit"] {
+    width: 50%; /* Ensure full width of its container */
+    padding: 0px 28px; /* Consistent padding */
+    background-color: #4a5568; /* Button background color */
+    color: #e2e8f0; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    font-size: 1.5rem; /* Font size for the button text */
+    font-weight: 700; /* Bold text */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Ensure text is centered */
+    margin-bottom: 24px; /* Space above the button */
+}
+
+input[type="submit"]:hover {
+    background-color: #63b3ed;
+    color: #1a202c;
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+    background-color: #63b3ed;
+    color: #1a202c;
+    transform: translateY(2px);
+}
+
+
+/* .form-section button:hover {
+    background-color: #63b3ed;
+    color: #1a202c;
+    transform: translateY(-2px);
+}
+
+.form-section button:active {
+    background-color: #63b3ed;
+    color: #1a202c;
+    transform: translateY(2px);
+} */
+
+/* Footer Text */
+.form-section p {
+    text-align: center;
+    color: #a0aec0;
+    margin-top: 24px;
+}
+
+.form-section p a {
+    color: #63b3ed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-section p a:hover {
+    text-decoration: underline;
+    color: #cbd5e0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* Update the input styles in your index.css file */
+
+input[type="email"],
+input[type="name"],
+input[type="password"] {
+  width: 70%;
+  padding: 12px 16px;
+  border: none; /* Remove the previous border */
+  border-bottom: 2px solid #e2e8f0; /* Add only bottom border */
+  border-radius: 0; /* Remove border radius */
+  font-size: 1.5rem;
+  transition: border-color 0.2s;
+  outline: none;
+  background-color: transparent; /* Make background transparent */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-bottom-color: var(--primary-blue); /* Change only bottom border color on focus */
+  box-shadow: none; /* Remove the previous box shadow */
+}
+
+/* Add these styles for the input containers */
+form div {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Optional: Add a subtle animation for the line */
+input[type="email"]:focus ~ .input-line,
+input[type="password"]:focus ~ .input-line {
+  width: 100%;
+}
+
+.input-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-blue);
+  transition: width 0.3s ease;
+}
+
+
+/* welcome page */
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a202c, #2d3748); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e2e8f0;
+}
+
+/* Container Styles */
+.welcome-container {
+    background-color: #2d3748;
+    width: 100%;
+    max-width: 860px;
+    height: 500px;  /* Same height and width for a square container */
+    border-radius: 16px;
+    display: flex;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Left Section (Welcome Text) */
+.left-section {
+    width: 50%;
+    height: 100%; /* Match the height of the container */
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #e2e8f0;
+    text-transform: uppercase;
+}
+
+.left-section p {
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+    color: #a0aec0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Right Section (Image) */
+.right-section {
+    width: 60%;
+    height: 90%; /* Match the height of the container */
+    background-color: #4a5568;
+    background-image: url('path/to/your/image.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-position: right center; 
+    border-radius: 0 16px 16px 0; /* Rounded corners on the right side */
+}
+.right-section  img{
+    width: 500px;
+    height: 500px;
+    
+}
+
+/* Welcome Links */
+.welcome-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.welcome-links a {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #63b3ed; /* Accent color */
+    padding: 12px 24px;
+    border-radius: 8px;
+    /* background-color: #4a5568; */
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.welcome-links a:hover {
+    background-color: #63b3ed;
+    color: #1a202c;
+    transform: translateY(-2px);
+}
+
+.welcome-links a:active {
+    transform: translateY(2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
